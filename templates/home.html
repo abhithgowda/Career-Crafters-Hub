@@ -2,95 +2,41 @@
 <html>
 
 <head>
-    <title>Your Title</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: right;
-            padding: 0px 200px;
-        }
-
-        #banner {
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 40px;
-            font-family: roboto;
-            font-weight: normal;
-            color: rgb(50, 50, 50);
-        }
-
-        h2 {
-            font-size: 40px;
-            font-family: roboto;
-            font-size: 32px;
-            font-weight: normal;
-            color: rgb(100, 100, 100);
-        }
-
-        p {
-            color: rgb(80, 80, 80);
-        }
-
-        button {
-            width: 10vw;
-
-        }
-
-        .btn-container {
-            text-align: center;
-        }
-
-        .job-details {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 10px;
-        }
-
-        .job-title {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .apply {
-            height: 8vh;
-        }
-    </style>
+    <title>Career-Crafters-Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      #banner{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+      }
+    </style>
 </head>
 
 <body>
-    <h1> {{company_name}} </h1>
-    <img id="banner"
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4" > {{company_name}} </h1>
+    <img class="img-fluid" id="banner"
         src="https://93d2da03-9140-433b-95ca-381afb6a1f70-00-3nr1shn2d60d8.pike.replit.dev/static/439636.jpg"></img>
-    <h2>The Description</h2>
-    <p>
+    <h2 class="text-center mt-2 mb-4" >The Description</h2>
+    <p class="lead" >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sem in erat pharetra accumsan. Proin
         auctor bibendum nunc, eget imperdiet lorem. Maecenas id viverra justo. Duis sodales auctor leo, at sagittis dui
         suscipit et. Fusce ac nisi ut magna dapibus finibus a sit amet ligula. Nam imperdiet sapien nec pulvinar
         placerat. Donec nec lacus eu dolor consequat gravida.
     </p>
-    <h1>Positions Open</h1>
+    <h1 class="text-center mt-2 mb-4" >Positions Open</h1>
+    <p>TODO-Show the Jobs here
     {% for job in jobs %}
-    <div class="job-details">
-        <div class="job-title">
-            <h3>{{job['title']}}</h3>
-            <div class="job-location">{{job['location']}}</div>
-        </div>
-        <button class="apply btn btn-outline-success">Apply</button>
-        </div>
-    </div>
+    {% include 'jobitem.html' %}
     {% endfor %}
-
-
-    <div class="btn-container"><button type="button" class="btn btn-primary">Contact us </button></div>
-
+    </p>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary">Contact us </button>
+      <p>Copy right 2022</p>
+    </div>
+  </div>
 </body>
-
+  
 </html>

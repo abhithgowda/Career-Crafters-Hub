@@ -30,6 +30,6 @@ Jobs=[
 @app.route("/")
 
 def hello():
-    return render_template("home.html",jobs=Jobs,company_name="something that you want")
+    return render_template("home.html",jobs=Jobs,company_name="Career Crafters Hub")
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
