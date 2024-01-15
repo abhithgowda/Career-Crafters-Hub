@@ -5,25 +5,25 @@ Jobs=[
   {
     'id':1,
     'title':'Data Anlayst',
-    'location':'bengaluru,india',
+    'location':'Bengaluru,india',
     'salary':'Rs.10,00,000'
   },
   {
     'id':2,
     'title': 'Data Scientist',
-    'location':'delhi,india',
+    'location':'Delhi,India',
     'salary':'Rs.15,00,000'
   },
   {
     'id':3,
     'title':'Frontend Engineer',
-    'location':'remote',
+    'location':'Remote',
     'salary':'Rs.12,00,000'
   },
   {
     'id':4,
     'title':'Backend Engineer',
-    'location':'san francisco,usa',
+    'location':'San Francisco,USA',
     'salary':'$120,000'
   }
 ]
