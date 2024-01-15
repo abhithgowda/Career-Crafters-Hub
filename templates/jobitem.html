@@ -1,4 +1,11 @@
 
+<style>
+  }
+  .apply:active{
+    transform:scale(0.95);
+    transition:all 0.5s ease in out;
+  }
+</style>
 <div class='mt-4 border-bottom pb-1 row'>
   <div class="col-9">
   <h3>{{job['title']}}</h3>
@@ -13,6 +20,6 @@
   {% endif %}
 </div>
 <div class="col-3 text-center">
-<button class="btn btn-outline-success">Apply</button>
+<button class=" apply btn btn-outline-success">Apply</button>
 </div>
 </div>
